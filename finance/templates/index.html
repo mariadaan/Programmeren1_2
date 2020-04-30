@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+</head>
+<body>
+
+<table class="table table-striped" style="width:100%">
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Shares</th>
+        <th>Price</th>
+        <th>TOTAL</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            {% for stock in dicts %}
+            <tr>
+                    <td>{{ stock["symbol"] }}</td>
+                    <td>{{ stock["symbolname"] }}</td>
+                    <td>{{ stock["shares"] }}</td>
+                    <td>{{ stock["price"] }}</td>
+                    <td>{{ stock["total"] }}</td>
+            </tr>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>CASH</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{ cash }}</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <b>{{ TOTAL }}</b>
+            </td>
+        </tr>
+    </tfoot>
+
+  </tr>
+  </tr>
+</table>
+
+</body>
+</html>
+{% endblock %}

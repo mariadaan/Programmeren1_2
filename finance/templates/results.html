@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block main %}
+        <h><b>Results</b></h>
+        <p></p>
+        <p><i>
+            {{ total_sells }} (sells) -
+            {{ total_buys }} (buys) +
+            {{ current_value }} (current value of holdings) =
+            {{ total_profit }} (total profit)
+        </i></p>
+        <p>
+            {{ final }}
+        </p>
+{% endblock %}
